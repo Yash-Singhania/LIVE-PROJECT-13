@@ -34,7 +34,7 @@ nav {
     list-style: none;
 }
 
-.nav-items a {
+nav a {
     color: #FFFFFF;
     text-decoration: none;
     background-color: #1BBCEF;
@@ -69,6 +69,7 @@ nav {
 
 .top {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin: 160px 0;
 }
@@ -118,9 +119,10 @@ nav {
 
 .feature-cards {
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
     justify-content: space-evenly;
 
-    height: 50vh;
     margin: 60px 0;
 }
 
@@ -144,4 +146,60 @@ nav {
 
 .content {
     text-align: center;
+}
+
+@media (max-width: 700px) {
+    nav {
+        padding: 5px 20px;
+    }
+
+    .nav-items li {
+        display: none;
+    }
+
+    .main-left {
+        padding: 5px 20px;
+        width: 100%;
+    }
+
+    .main-left h1 {
+        font-size: 60px;
+        line-height: 70px;
+
+        margin-bottom: 40px;
+    }
+    
+    .main-right img {
+        display: none;
+    }
+
+    .top {
+        margin: 0;
+    }
+
+    .top .img {
+        width: 100%;
+    }
+
+    .top .img img {
+        width: fit-content;
+    }
+
+    .top .about {
+        width: 100%;
+        margin: 0 30px;
+    }
+
+    .card {
+        margin: 10px 0;
+    }
+
+    .card p:nth-child(2) {
+        margin: 20px 0;
+    }
+
+    .feature-card {
+        width: 60%;
+    }
+
 }
